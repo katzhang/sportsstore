@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-controller="sportsStoreCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -29,7 +29,13 @@
       Categories go here
       </div>
       <div class="col-xs-8">
-      Products go here
+        <div class="well" ng-repeat="item in data.products">
+           <h3>
+             <strong>{{item.name}}</strong>
+             <span class="pull-right label label-primary">{{item.price | currency}}</span>
+           </h3>
+           <span class="lead">{{item.description}}</span>
+        </div>
       </div>
     </div>
 
@@ -69,8 +75,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/sportsStore.js"></script>
         <!-- endbuild -->
 </body>
 </html>
