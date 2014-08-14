@@ -23,6 +23,7 @@
     <!-- Add your site or application content here -->
     <div class="navbar navbar-inverse">
       <a class="navbar-brand" href="#">SPORTS STORE</a>
+      <cart-summary />
     </div>
     <div class="alert alert-danger" ng-show="data.error">
       Error ({{data.error.status}}). The product data was not loaded.
@@ -70,6 +71,7 @@
         <script src="scripts/controllers/sportsStore.js"></script>
         <script src="scripts/filters/customFilters.js"></script>
         <script src="scripts/controllers/productListControllers.js"></script>
+        <script src="scripts/components/cart/cart.js"></script>
         <!-- endbuild -->
 </body>
 </html>

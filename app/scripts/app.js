@@ -32,4 +32,4 @@ angular
       });
   });
 
-angular.module("sportsStore", ["customFilters"]);
+angular.module("sportsStore", ["customFilters", "cart"]);
