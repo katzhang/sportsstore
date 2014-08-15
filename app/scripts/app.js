@@ -20,6 +20,12 @@ angular
     'cart'
   ])
   .config(function ($routeProvider) {
+    $routeProvider.when("/complete", {
+      templateUrl: "scripts/views/thankYou.html"
+    });
+    $routeProvider.when("/placeorder", {
+      templateUrl: "scripts/views/placeorder.html"
+    });
     $routeProvider.when("/checkout", {
       templateUrl: "scripts/views/checkoutSummary.html"
     });
