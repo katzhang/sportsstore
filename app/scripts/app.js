@@ -9,27 +9,46 @@
  * Main module of the application.
  */
 angular
-  .module('sportsstoreAppApp', [
+  .module('sportsStore', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'customFilters',
+    'cart'
   ])
   .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+    $routeProvider.when("/checkout", {
+      templateUrl: "scripts/views/checkoutSummary.html"
+    });
+    $routeProvider.when("/products", {
+      templateUrl: "scripts/views/productList.html"
+    });
+    $routeProvider.otherwise({
+      templateUrl: "scripts/views/productList.html"
+    });
   });
 
-angular.module("sportsStore", ["customFilters", "cart"]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
