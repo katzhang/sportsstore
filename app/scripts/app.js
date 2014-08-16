@@ -24,7 +24,7 @@ angular
       templateUrl: "scripts/views/thankYou.html"
     });
     $routeProvider.when("/placeorder", {
-      templateUrl: "scripts/views/placeorder.html"
+      templateUrl: "scripts/views/placeOrder.html"
     });
     $routeProvider.when("/checkout", {
       templateUrl: "scripts/views/checkoutSummary.html"
